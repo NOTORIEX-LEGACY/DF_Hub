@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
 
 body{
     background-color: white;
@@ -23,7 +25,7 @@ body{
 table {
     border-collapse: collapse;
     width: 100%;
-    font-family: 'Poppins';
+    font-family: 'Fjalla One';
     /* border-radius: 100px; */
 }
 
@@ -33,9 +35,15 @@ table th, table td{
     text-align: center;
 }
 
+h3{
+    font-family: 'Oxygen';
+    font-weight: 700;
+}
+
 p {
-    font-family: 'Raleway';
+    font-family: 'Oxygen';
     text-align: justify;
+    font-weight: 400;
 }
 
 nav ul{
@@ -202,11 +210,11 @@ table tr th a{
 }
 
 table tr th a:nth-of-type(2n - 1):hover{
-    color: red;
+    color: rgb(255, 187, 0);
 }
 
 table tr td a{
-    color: rgb(177, 100, 0);
+    color: rgb(0, 0, 0);
 
     transition-property: all;
     transition-duration: 1.5s;
