@@ -1,4 +1,4 @@
-# ${REPO_NAME}
+# DF_Hub
 <h2>PLEASE READ LICENSE.md!</h2>
 
-${Description}
+DF_Hub
