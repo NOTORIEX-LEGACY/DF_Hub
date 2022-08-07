@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap');
+
 body{
     background-color: white;
     height: 100%;
@@ -11,8 +15,27 @@ body{
     width: 90%;
     background-color: white;
     margin-bottom: 20px;
-    overflow: hidden;
+    /* overflow: hidden; */
     /* border-radius: 30px; */
+}
+
+/* TABLE */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-family: 'Poppins';
+    /* border-radius: 100px; */
+}
+
+table th, table td{
+    border: 1px solid #dddddd;
+    padding: 15px;
+    text-align: center;
+}
+
+p {
+    font-family: 'Raleway';
+    text-align: justify;
 }
 
 nav ul{
@@ -20,8 +43,8 @@ nav ul{
 }
 
 nav {
-    background-color: #CCBA7C;
-    font-family: 'Anton';
+    background-color: rgb(221, 169, 0);
+    font-family: 'Rubik';
     font-size: 20px;
 }
 
@@ -31,35 +54,98 @@ nav a{
 }
 
 nav a:hover, nav ul li:hover{
-    color:rgb(131, 131, 131);
+    color:rgb(255, 0, 0);
     text-decoration: underline;
 }
 
 header{
     text-align: center;
-    color: #006dfc;
-    background-color: black;
+    color: rgb(129, 127, 127);
+    background-color: rgb(47, 61, 86);
     padding-bottom: 20px;
     margin-bottom: -20px;
-    margin-top: -23px;
-    font-family: 'Titan One';
+    /* margin-top: -23px; */
+    font-family: 'Inter';
 }
 
 .first-word{
-    color: red;
+    color: rgb(138, 0, 0);
     font-size: 23px;
-    font-family: 'Montserrat';
+    font-family: 'Fira Sans';
     animation-name: first-word-move;
     animation-duration: 1.5s;
+    animation-delay: .2s;
     animation-fill-mode: forwards;
     position: relative;
-    top: -4000px;
+    opacity: 0;
+    right: -4000px;
+}
+
+@keyframes first-word-move{
+    0%{
+        opacity: 0;
+        right: -4000px;
+    }
+    100%{
+        opacity: 1;
+        right: 0px;
+    }
+}
+
+header h1{
+    /* ANIMATION */
+    animation-name: header-move;
+    animation-duration: 1s;
+    /* animation-delay: 1s; */
+    /* opacity: 0; */
+    animation-fill-mode: forwards;
+    position: relative;
+    left: -4000px;
+}
+
+@keyframes header-move{
+    0%{
+        /* opacity: 0; */
+        /* font-size: 16px; */
+        left: -4000px;
+    }
+    100%{
+        /* opacity: 1; */
+        /* font-size: 32px; */
+        left: 0px;
+    }
 }
 
 footer{
-    background-color: #413A27;
-    margin-top: 30px;
-    margin-bottom: -28px;
+    background-color: #005e10;
+    /* margin-top: 30px; */
+    /* margin-bottom: -28px; */
+}
+
+footer p{
+    padding: 30px;
+    text-align: center;
+    font-family: 'Inter';
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+
+    /* ANIMATION */
+    animation-name: footer-up;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+    position: relative;
+    bottom: -500px;
+}
+
+@keyframes footer-up{
+    0%{
+        bottom: -500px;
+    }
+    100%{
+        bottom: 0px;
+    }
 }
 
 nav {
@@ -70,6 +156,67 @@ nav ul li{
     list-style-type: none;
     padding: 10px;
     text-align: center;
+}
+
+table th img, table td img{
+    width: 90%;
+}
+
+iframe{
+    width: 90%;
+    height: 90%;
+    /* border-radius: 15px; */
+}
+
+.submitted-file{
+    color: red;
+
+    animation-name: emphasis-submit;
+    animation-direction: alternate;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes emphasis-submit{
+    0%{
+        text-shadow: 1px 1px blue;
+    }
+    50%{
+        text-shadow: 1px 1px red;
+    }
+    100%{
+        text-shadow: 1px 1px blue;
+    }
+}
+
+table tr td ul li, table tr td ol li{
+    list-style-type: none;
+}
+
+table tr th a{
+    color: black;
+
+    transition-property: all;
+    transition-duration: 1s;
+}
+
+table tr th a:nth-of-type(2n - 1):hover{
+    color: red;
+}
+
+table tr td a{
+    color: rgb(177, 100, 0);
+
+    transition-property: all;
+    transition-duration: 1.5s;
+}
+
+table tr td a:hover{
+    color: rgb(2, 206, 121);
+}
+
+table tr th a:visited{
+    color: black;
 }
 
 nav ul ul{
@@ -91,11 +238,77 @@ nav ul li{
     cursor: pointer;
 }
 
+/* CONFIGURE TABLE COLOURS */
+table tr:nth-of-type(2n){
+    background-color: white;
+}
+
+table tr:nth-of-type(2n - 1){
+    background-color: rgb(216, 216, 216);
+}
+
+table tr:nth-of-type(1){
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
 /* img {
     border-radius: 20px;
 } */
 
-@media (min-width: 768px){
+.results{
+    color: green;
+
+    text-shadow: none;
+
+    /* ANIMATION */
+    animation-name: success-noice;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.reviews-table{
+    margin-bottom: 50px;
+    overflow-x: auto;
+}
+
+#review-title{
+    text-align: center;
+    font-family: 'Raleway';
+}
+
+@keyframes success-noice{
+    0%{
+        text-shadow: none;
+    }
+    100%{
+        text-shadow: 0px 0px 2px turquoise;
+    }
+}
+
+
+.failure-message{
+    color: red;
+
+    /* ANIMATION */
+    animation-name: attention-feyleures;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes attention-feyleures{
+    0%{
+        color: yellow;
+    }
+    100%{
+        color: red;
+    }
+}
+
+/* Desktop Layout */
+@media only screen and (min-width: 768px){
     nav ul li:hover{
         color: black;
         text-decoration: none;
@@ -103,7 +316,7 @@ nav ul li{
 
     nav > ul{
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 1fr;
     }
 
@@ -113,8 +326,14 @@ nav ul li{
         min-width: 200px;
         transform: translateX(20%);
     }
+
+    table th img, table td img{
+        width: 60%;
+        height: 60%;
+    }
+
     nav ul li ul{
-    background-color: #DE9B35;
+        background-color: #DE9B35;
     }
 
     nav a:hover{
@@ -128,11 +347,16 @@ nav ul li{
     }
 
     nav li:hover{
-        background-color: rgb(131, 131, 131);
+        background-color: rgb(255, 0, 0);
     }
 
     nav ul li ul li:hover{
         background-color: rgb(74, 100, 137);
+    }
+    
+    iframe{
+        width: 90%;
+        height: 50vh;
     }
     img {
         transition-property: all;
