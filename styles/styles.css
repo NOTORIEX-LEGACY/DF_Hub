@@ -203,14 +203,14 @@ table tr td ul li, table tr td ol li{
 }
 
 table tr th a{
-    color: rgb(255, 0, 0);
+    color: rgb(0, 0, 0);
 
     transition-property: all;
     transition-duration: 1s;
 }
 
 table tr th a:nth-of-type(2n - 1):hover{
-    color: rgb(255, 187, 0);
+    color: rgb(177, 130, 0);
 }
 
 table tr td a{
