@@ -1,0 +1,145 @@
+body{
+    background-color: white;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.wrapper{
+    margin: auto;
+    width: 90%;
+    background-color: white;
+    margin-bottom: 20px;
+    overflow: hidden;
+    /* border-radius: 30px; */
+}
+
+nav ul{
+    padding: 0; /* https://stackoverflow.com/questions/9620594/removing-ul-indentation-with-css */
+}
+
+nav {
+    background-color: #CCBA7C;
+    font-family: 'Anton';
+    font-size: 20px;
+}
+
+nav a{
+    color: black;
+    text-decoration: none;
+}
+
+nav a:hover, nav ul li:hover{
+    color:rgb(131, 131, 131);
+    text-decoration: underline;
+}
+
+header{
+    text-align: center;
+    color: #006dfc;
+    background-color: black;
+    padding-bottom: 20px;
+    margin-bottom: -20px;
+    margin-top: -23px;
+    font-family: 'Titan One';
+}
+
+.first-word{
+    color: red;
+    font-size: 23px;
+    font-family: 'Montserrat';
+    animation-name: first-word-move;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    position: relative;
+    top: -4000px;
+}
+
+footer{
+    background-color: #413A27;
+    margin-top: 30px;
+    margin-bottom: -28px;
+}
+
+nav {
+    display: block;
+}
+
+nav ul li{
+    list-style-type: none;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul ul{
+    display: none;
+}
+
+/* Sub-Menu */
+nav ul li:hover > ul{
+    position: relative;
+    display: block;
+    min-width: 200px;
+}
+
+nav ul li ul li{
+    text-align: center;
+}
+
+nav ul li{
+    cursor: pointer;
+}
+
+/* img {
+    border-radius: 20px;
+} */
+
+@media (min-width: 768px){
+    nav ul li:hover{
+        color: black;
+        text-decoration: none;
+    }
+
+    nav > ul{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 1fr;
+    }
+
+    nav ul li:hover > ul{
+        position: absolute;
+        display: block;
+        min-width: 200px;
+        transform: translateX(20%);
+    }
+    nav ul li ul{
+    background-color: #DE9B35;
+    }
+
+    nav a:hover{
+        color: black;
+        text-decoration: none;
+    }
+
+    nav li{
+        transition-property: all;
+        transition-duration: 0.5s;
+    }
+
+    nav li:hover{
+        background-color: rgb(131, 131, 131);
+    }
+
+    nav ul li ul li:hover{
+        background-color: rgb(74, 100, 137);
+    }
+    img {
+        transition-property: all;
+        transition-duration: 1s;
+    }
+    img:hover{
+        width: 80%;
+        height: 80%;
+    }
+}
