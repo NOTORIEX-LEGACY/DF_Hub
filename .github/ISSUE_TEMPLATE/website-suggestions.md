@@ -2,7 +2,7 @@
 name: Website Suggestions
 about: Suggest a content or interface renovation for this project
 title: "[SUGGESTIONS]"
-labels: ''
+labels: suggestions
 assignees: ENTPRESTIGIOUS
 
 ---

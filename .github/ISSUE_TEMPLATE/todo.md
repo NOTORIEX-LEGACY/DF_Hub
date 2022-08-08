@@ -2,7 +2,7 @@
 name: TODO
 about: Add a TODO Here!
 title: "[TODO]"
-labels: ''
+labels: todo
 assignees: ENTPRESTIGIOUS
 
 ---
